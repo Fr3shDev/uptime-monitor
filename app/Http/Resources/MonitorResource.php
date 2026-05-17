@@ -20,9 +20,9 @@ class MonitorResource extends JsonResource
             'check_interval'    => $this->check_interval,
             'threshold'         => $this->threshold,
             'status'            => $this->status,
-            'last_checked_at'   => $this->last_checked_at?->toIso8601String(),
+            'last_checked_at'   => $this->last_checked_at?->toJSON(),
             'uptime_percentage' => $this->uptimePercentage(),
-            'created_at'        => $this->created_at->toIso8601String(),
+            'created_at'        => $this->created_at->toJSON(),
         ];
     }
 }
